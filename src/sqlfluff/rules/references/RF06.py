@@ -263,7 +263,7 @@ class Rule_RF06(BaseRule):
             anti_template,
             identifier_contents,
             regex.IGNORECASE,
-        ):
+        ) or identifier_is_keyword:
             return None
 
         return LintResult(
